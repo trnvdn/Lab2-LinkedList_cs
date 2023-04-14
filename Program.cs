@@ -23,7 +23,7 @@ internal class Program
         list.Print();
         ///////////////////
         Console.WriteLine("Вставлення елементу після введеного індексу");
-        list.AddAfter(2,100);
+        list.AddAfter(20,100);
         list.Print();
         Console.WriteLine("Видаленя усіх парних чисел");
         list.RemoveAllEvenNumbers();
@@ -34,14 +34,19 @@ internal class Program
         Console.WriteLine("Сума додатніх чисел");
         list.SumOfPositiveNums();
         Console.WriteLine("перевизначення оператора /");
+        list.Print();
         list = list / 2;
         list.Print();
         Console.WriteLine("перевизначення оператора +");
+        list.Print();
         list = list + 10;
         list.Print();
         Console.WriteLine("Створення копії списку");
         LinkedList copy = new LinkedList();
         copy.GetHead(new Node(list.ReturnHead()));
+        copy.Print();
+        Console.WriteLine(copy.Second);
+        Console.WriteLine(copy.Second = 2000);
         copy.Print();
     }
 }

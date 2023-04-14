@@ -39,9 +39,13 @@ public class LinkedList
                 index++;
             }
 
-            if (cur.next == null && index < i)
+            if (cur.next == null && index == i)
             {
                 Insert(n);
+            }
+            else if(cur.next == null && index < i)
+            {
+                Console.WriteLine("Index is out of range");
             }
             else
             {
@@ -88,7 +92,6 @@ public class LinkedList
         if(head.info % 2 == 0 && head.next == null)
         {
             head = new Node(null);
-            
         }
         else
         {
